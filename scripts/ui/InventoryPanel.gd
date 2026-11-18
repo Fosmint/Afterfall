@@ -265,7 +265,7 @@ func _on_use_pressed() -> void:
 
 func _on_drop_pressed() -> void:
 	if _selected_slot >= 0:
-		var removed := _world_ctrl.inventory.remove_at_slot(_selected_slot, 1)
+		var removed: Dictionary = _world_ctrl.inventory.remove_at_slot(_selected_slot, 1)
 		if not removed.is_empty():
 			AudioManager.play_sfx("ui_click")
 			EventBus.notification_requested.emit("Выброшено: %s" % DataManager.get_item_name(str(removed["id"])), Color(0.85, 0.72, 0.55))
@@ -295,7 +295,7 @@ func _on_take_from_storage(st_idx: int) -> void:
 	var entry = _active_storage.storage_slots[st_idx]
 	if entry == null:
 		return
-	var left := _world_ctrl.inventory.add_item(str(entry["id"]), int(entry["count"]), int(entry.get("durability", -1)))
+	var left: int = _world_ctrl.inventory.add_item(str(entry["id"]), int(entry["count"]), int(entry.get("durability", -1)))
 	if left == 0:
 		_active_storage.storage_slots[st_idx] = null
 		AudioManager.play_sfx("pickup")

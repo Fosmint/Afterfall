@@ -93,11 +93,11 @@ func refresh() -> void:
 		var cost_parts: PackedStringArray = []
 		for mat_id in cost.keys():
 			var need := int(cost[mat_id])
-			var have := _world_ctrl.inventory.get_item_count(str(mat_id))
+			var have: int = _world_ctrl.inventory.get_item_count(str(mat_id))
 			cost_parts.append("%s: %d/%d" % [DataManager.get_item_name(str(mat_id)), have, need])
 
-		var has_kit := (b_id == "campfire" and _world_ctrl.inventory.get_item_count("campfire_kit") > 0) or (b_id == "storage_chest" and _world_ctrl.inventory.get_item_count("wooden_crate") > 0)
-		var can := has_kit or _world_ctrl.inventory.has_items(cost)
+		var has_kit: bool = (b_id == "campfire" and _world_ctrl.inventory.get_item_count("campfire_kit") > 0) or (b_id == "storage_chest" and _world_ctrl.inventory.get_item_count("wooden_crate") > 0)
+		var can: bool = has_kit or _world_ctrl.inventory.has_items(cost)
 
 		var cost_lbl := Label.new()
 		cost_lbl.text = ("Готовый набор в инвентаре!" if has_kit else "Нужно: " + "  |  ".join(cost_parts))

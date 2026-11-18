@@ -181,12 +181,12 @@ func _place_poi(poi_name: String, center: Vector2i, main_obj: String, props: Arr
 				tiles[p.y * MAP_SIZE + p.x] = TileType.ROAD_DAMAGED if rng.randf() < 0.5 else TileType.DIRT
 				objects.erase(p)
 	_add_obj(center, main_obj, poi_name)
-	var offsets := [
+	var offsets: Array[Vector2i] = [
 		Vector2i(2, 2), Vector2i(-2, 2), Vector2i(2, -2),
 		Vector2i(-2, -2), Vector2i(3, 0), Vector2i(0, 3)
 	]
 	for i in range(mini(props.size(), offsets.size())):
-		var p := center + offsets[i]
+		var p: Vector2i = center + offsets[i]
 		if is_valid_tile(p) and not objects.has(p):
 			_add_obj(p, str(props[i]))
 

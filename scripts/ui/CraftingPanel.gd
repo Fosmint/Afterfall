@@ -108,13 +108,13 @@ func refresh() -> void:
 		var ingredients: Dictionary = recipe.get("ingredients", {})
 		for mat_id in ingredients.keys():
 			var need := int(ingredients[mat_id])
-			var have := _world_ctrl.inventory.get_item_count(str(mat_id))
+			var have: int = _world_ctrl.inventory.get_item_count(str(mat_id))
 			ing_parts.append("%s: %d/%d" % [DataManager.get_item_name(str(mat_id)), have, need])
 
 		var mat_lbl := Label.new()
 		mat_lbl.text = "Материалы: " + "  |  ".join(ing_parts)
 		mat_lbl.add_theme_font_size_override("font_size", 14)
-		var can := _world_ctrl.crafting.can_craft(recipe)
+		var can: bool = _world_ctrl.crafting.can_craft(recipe)
 		mat_lbl.add_theme_color_override("font_color", Color(0.68, 0.9, 0.68) if can else Color(0.86, 0.58, 0.52))
 		mat_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD
 		info.add_child(mat_lbl)

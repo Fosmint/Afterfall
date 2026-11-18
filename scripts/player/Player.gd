@@ -143,7 +143,7 @@ func _animate_walk(delta: float) -> void:
 	if _step_timer >= 0.34:
 		_step_timer = 0.0
 		var tile := IsoMath.world_to_tile(position)
-		var t_type := _world_ctrl.generator.get_tile(tile)
+		var t_type: int = _world_ctrl.generator.get_tile(tile)
 		if t_type == WorldGenerator.TileType.ASPHALT or t_type == WorldGenerator.TileType.ROAD_DAMAGED:
 			AudioManager.play_sfx("step_asphalt", 0.12)
 		else:
@@ -182,8 +182,8 @@ func trigger_interact() -> void:
 		EventBus.interactable_changed.emit(_nearest_interactable, _nearest_interactable.get_interact_label())
 	elif _nearest_interactable is WorldObject:
 		var obj := _nearest_interactable as WorldObject
-		var tool_pow := _world_ctrl.inventory.get_tool_power_for(obj.get_preferred_tool())
-		var skill_mult := _world_ctrl.survival.get_gathering_speed_multiplier()
+		var tool_pow: float = _world_ctrl.inventory.get_tool_power_for(obj.get_preferred_tool())
+		var skill_mult: float = _world_ctrl.survival.get_gathering_speed_multiplier()
 		_gather_target = obj
 		_gather_duration = obj.get_gather_time(tool_pow, skill_mult)
 		_gather_elapsed = 0.0
@@ -219,7 +219,7 @@ func _cancel_gathering() -> void:
 func _update_player_light() -> void:
 	if _world_ctrl == null or _player_light == null:
 		return
-	var rad := _world_ctrl.inventory.has_equipped_light()
+	var rad: float = _world_ctrl.inventory.has_equipped_light()
 	var lights_on := bool(GameManager.settings.get("dynamic_lights", true))
 	_player_light.visible = lights_on and rad > 0.0
 	if rad > 0.0:

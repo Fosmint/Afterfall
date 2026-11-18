@@ -157,27 +157,44 @@ func _build_pause_panel() -> void:
 	title.add_theme_color_override("font_color", UIThemeHelper.COL_TEXT)
 	v.add_child(title)
 
-	for spec in [
-		["Продолжить", true, func(): close_all()],
-		["Сохранить игру", false, func():
-			if _world_ctrl:
-				_world_ctrl.save_world(true)
-				EventBus.notification_requested.emit("Игра сохранена!", Color(0.62, 0.92, 0.65))
-			close_all()
-		],
-		["Настройки (iQOO Z9)", false, func(): open_settings()],
-		["Главное меню", false, func():
-			if _world_ctrl:
-				_world_ctrl.save_world(false)
-			GameManager.return_to_main_menu()
-		]
-	]:
-		var b := Button.new()
-		b.text = spec[0]
-		b.custom_minimum_size = Vector2(0, 50)
-		UIThemeHelper.style_button(b, spec[1], 18)
-		b.pressed.connect(spec[2])
-		v.add_child(b)
+	var resume_b := Button.new()
+	resume_b.text = "Продолжить"
+	resume_b.custom_minimum_size = Vector2(0, 50)
+	UIThemeHelper.style_button(resume_b, true, 18)
+	resume_b.pressed.connect(close_all)
+	v.add_child(resume_b)
+
+	var save_b := Button.new()
+	save_b.text = "Сохранить игру"
+	save_b.custom_minimum_size = Vector2(0, 50)
+	UIThemeHelper.style_button(save_b, false, 18)
+	save_b.pressed.connect(_on_pause_save_pressed)
+	v.add_child(save_b)
+
+	var settings_b := Button.new()
+	settings_b.text = "Настройки (iQOO Z9)"
+	settings_b.custom_minimum_size = Vector2(0, 50)
+	UIThemeHelper.style_button(settings_b, false, 18)
+	settings_b.pressed.connect(open_settings)
+	v.add_child(settings_b)
+
+	var menu_b := Button.new()
+	menu_b.text = "Главное меню"
+	menu_b.custom_minimum_size = Vector2(0, 50)
+	UIThemeHelper.style_button(menu_b, false, 18)
+	menu_b.pressed.connect(_on_pause_menu_pressed)
+	v.add_child(menu_b)
+
+func _on_pause_save_pressed() -> void:
+	if _world_ctrl:
+		_world_ctrl.save_world(true)
+		EventBus.notification_requested.emit("Игра сохранена!", Color(0.62, 0.92, 0.65))
+	close_all()
+
+func _on_pause_menu_pressed() -> void:
+	if _world_ctrl:
+		_world_ctrl.save_world(false)
+	GameManager.return_to_main_menu()
 
 func _build_settings_panel() -> void:
 	settings_panel = PanelContainer.new()

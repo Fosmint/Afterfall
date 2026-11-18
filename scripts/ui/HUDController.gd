@@ -187,25 +187,50 @@ func _build_hud_layout() -> void:
 	menu_row.add_theme_constant_override("separation", 6)
 	right_col.add_child(menu_row)
 
-	for spec in [
-		["Инв.", func(): _toggle_panel(_inv_panel, func(): _inv_panel.open_inventory())],
-		["Крафт", func(): _toggle_panel(_craft_panel, func(): _craft_panel.open_crafting())],
-		["Стройка", func(): _toggle_panel(_build_panel, func(): _build_panel.open_building())],
-		["Навыки", func():
-			_close_game_panels()
-			_modals.open_skills()
-		]
-	]:
-		var b := Button.new()
-		b.text = spec[0]
-		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		b.custom_minimum_size = Vector2(68, 56)
-		UIThemeHelper.style_button(b, false, 15)
-		b.pressed.connect(func():
-			AudioManager.play_sfx("ui_click")
-			spec[1].call()
-		)
-		menu_row.add_child(b)
+	var inv_btn := Button.new()
+	inv_btn.text = "Инв."
+	inv_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	inv_btn.custom_minimum_size = Vector2(68, 56)
+	UIThemeHelper.style_button(inv_btn, false, 15)
+	inv_btn.pressed.connect(func():
+		AudioManager.play_sfx("ui_click")
+		_toggle_panel(_inv_panel, _inv_panel.open_inventory)
+	)
+	menu_row.add_child(inv_btn)
+
+	var craft_btn := Button.new()
+	craft_btn.text = "Крафт"
+	craft_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	craft_btn.custom_minimum_size = Vector2(68, 56)
+	UIThemeHelper.style_button(craft_btn, false, 15)
+	craft_btn.pressed.connect(func():
+		AudioManager.play_sfx("ui_click")
+		_toggle_panel(_craft_panel, _craft_panel.open_crafting)
+	)
+	menu_row.add_child(craft_btn)
+
+	var build_btn := Button.new()
+	build_btn.text = "Стройка"
+	build_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	build_btn.custom_minimum_size = Vector2(68, 56)
+	UIThemeHelper.style_button(build_btn, false, 15)
+	build_btn.pressed.connect(func():
+		AudioManager.play_sfx("ui_click")
+		_toggle_panel(_build_panel, _build_panel.open_building)
+	)
+	menu_row.add_child(build_btn)
+
+	var skills_btn := Button.new()
+	skills_btn.text = "Навыки"
+	skills_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	skills_btn.custom_minimum_size = Vector2(68, 56)
+	UIThemeHelper.style_button(skills_btn, false, 15)
+	skills_btn.pressed.connect(func():
+		AudioManager.play_sfx("ui_click")
+		_close_game_panels()
+		_modals.open_skills()
+	)
+	menu_row.add_child(skills_btn)
 
 	# 7. Полоса прогресса добычи (по центру снизу над быстрой панелью)
 	_gather_box = PanelContainer.new()
