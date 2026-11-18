@@ -1,0 +1,172 @@
+{
+  "recipes": [
+    {
+      "id": "craft_simple_axe",
+      "result": "simple_axe",
+      "amount": 1,
+      "station": "none",
+      "xp": 15,
+      "ingredients": { "wood": 3, "stone": 2 }
+    },
+    {
+      "id": "craft_campfire_kit",
+      "result": "campfire_kit",
+      "amount": 1,
+      "station": "none",
+      "xp": 12,
+      "ingredients": { "wood": 4, "stone": 3 }
+    },
+    {
+      "id": "craft_wooden_crate",
+      "result": "wooden_crate",
+      "amount": 1,
+      "station": "none",
+      "xp": 12,
+      "ingredients": { "wood": 6 }
+    },
+    {
+      "id": "craft_rope",
+      "result": "rope",
+      "amount": 1,
+      "station": "none",
+      "xp": 8,
+      "ingredients": { "cloth": 3 }
+    },
+    {
+      "id": "craft_simple_tool",
+      "result": "simple_tool",
+      "amount": 1,
+      "station": "none",
+      "xp": 18,
+      "ingredients": { "wood": 2, "scrap_metal": 3 }
+    },
+    {
+      "id": "craft_bandage",
+      "result": "bandage",
+      "amount": 1,
+      "station": "none",
+      "xp": 10,
+      "ingredients": { "cloth": 2 }
+    },
+    {
+      "id": "craft_torch",
+      "result": "torch",
+      "amount": 1,
+      "station": "none",
+      "xp": 10,
+      "ingredients": { "wood": 2, "cloth": 1 }
+    },
+    {
+      "id": "craft_charcoal",
+      "result": "charcoal",
+      "amount": 2,
+      "station": "campfire",
+      "xp": 8,
+      "ingredients": { "wood": 3 }
+    },
+    {
+      "id": "craft_clean_water_boil",
+      "result": "clean_water",
+      "amount": 1,
+      "station": "campfire",
+      "xp": 10,
+      "ingredients": { "dirty_water": 1 }
+    },
+    {
+      "id": "craft_clean_water_filter",
+      "result": "clean_water",
+      "amount": 1,
+      "station": "none",
+      "xp": 12,
+      "ingredients": { "dirty_water": 1, "charcoal": 1, "cloth": 1 }
+    },
+    {
+      "id": "craft_cooked_ration",
+      "result": "cooked_ration",
+      "amount": 1,
+      "station": "campfire",
+      "xp": 16,
+      "ingredients": { "berries": 2, "vegetables": 1 }
+    },
+    {
+      "id": "craft_cooked_ration_can",
+      "result": "cooked_ration",
+      "amount": 1,
+      "station": "campfire",
+      "xp": 15,
+      "ingredients": { "canned_food": 1, "clean_water": 1 }
+    },
+    {
+      "id": "craft_herbal_tea",
+      "result": "herbal_tea",
+      "amount": 1,
+      "station": "campfire",
+      "xp": 12,
+      "ingredients": { "clean_water": 1, "berries": 2 }
+    },
+    {
+      "id": "craft_nails",
+      "result": "nails",
+      "amount": 4,
+      "station": "workbench",
+      "xp": 10,
+      "ingredients": { "scrap_metal": 2 }
+    },
+    {
+      "id": "craft_iron_axe",
+      "result": "iron_axe",
+      "amount": 1,
+      "station": "workbench",
+      "xp": 30,
+      "ingredients": { "wood": 3, "scrap_metal": 5, "rope": 1 }
+    },
+    {
+      "id": "craft_pickaxe",
+      "result": "pickaxe",
+      "amount": 1,
+      "station": "workbench",
+      "xp": 28,
+      "ingredients": { "wood": 3, "scrap_metal": 4, "stone": 2 }
+    },
+    {
+      "id": "craft_crowbar",
+      "result": "crowbar",
+      "amount": 1,
+      "station": "workbench",
+      "xp": 30,
+      "ingredients": { "scrap_metal": 6, "cloth": 1 }
+    },
+    {
+      "id": "craft_medkit",
+      "result": "medkit",
+      "amount": 1,
+      "station": "workbench",
+      "xp": 28,
+      "ingredients": { "bandage": 2, "clean_water": 1, "plastic": 2 }
+    },
+    {
+      "id": "craft_flashlight",
+      "result": "flashlight",
+      "amount": 1,
+      "station": "workbench",
+      "xp": 35,
+      "ingredients": { "plastic": 3, "electronics": 2, "battery": 1 }
+    },
+    {
+      "id": "craft_backpack_upgrade",
+      "result": "backpack_upgrade",
+      "amount": 1,
+      "station": "workbench",
+      "xp": 45,
+      "ingredients": { "cloth": 8, "rope": 3, "scrap_metal": 2 }
+    },
+    {
+      "id": "craft_warm_coat",
+      "result": "warm_coat",
+      "amount": 1,
+      "station": "workbench",
+      "xp": 40,
+      "ingredients": { "cloth": 10, "rope": 2 }
+    }
+  ]
+}

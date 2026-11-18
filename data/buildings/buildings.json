@@ -1,0 +1,139 @@
+{
+  "buildings": {
+    "campfire": {
+      "id": "campfire",
+      "name": "Костёр",
+      "description": "Даёт тёплый свет ночью, согревает и позволяет готовить еду и кипятить воду.",
+      "sprite": "res://assets/sprites/buildings/campfire_lit.png",
+      "sprite_unlit": "res://assets/sprites/buildings/campfire.png",
+      "cost": { "wood": 4, "stone": 3 },
+      "solid": true,
+      "walkable": false,
+      "provides_light": true,
+      "light_radius": 2.4,
+      "station_type": "campfire",
+      "interact_verb": "Подбросить дров",
+      "xp": 20
+    },
+    "wood_floor": {
+      "id": "wood_floor",
+      "name": "Деревянный пол",
+      "description": "Ровный настил из досок для обустройства территории убежища.",
+      "sprite": "res://assets/sprites/buildings/wood_floor.png",
+      "cost": { "wood": 3 },
+      "solid": false,
+      "walkable": true,
+      "is_floor": true,
+      "xp": 8
+    },
+    "wood_wall": {
+      "id": "wood_wall",
+      "name": "Деревянная стена",
+      "description": "Прочная ограда из брёвен и досок для периметра убежища.",
+      "sprite": "res://assets/sprites/buildings/wood_wall.png",
+      "cost": { "wood": 5, "rope": 1 },
+      "solid": true,
+      "walkable": false,
+      "xp": 14
+    },
+    "storage_chest": {
+      "id": "storage_chest",
+      "name": "Хранилище",
+      "description": "Вместительный сундук на 16 ячеек для хранения найденных припасов.",
+      "sprite": "res://assets/sprites/buildings/storage_chest.png",
+      "cost": { "wood": 6, "scrap_metal": 2 },
+      "solid": true,
+      "walkable": false,
+      "is_storage": true,
+      "storage_slots": 16,
+      "interact_verb": "Открыть хранилище",
+      "xp": 22
+    },
+    "bed": {
+      "id": "bed",
+      "name": "Кровать",
+      "description": "Позволяет поспать 6 часов, восстановив энергию и здоровье.",
+      "sprite": "res://assets/sprites/buildings/bed.png",
+      "cost": { "wood": 6, "cloth": 4, "rope": 1 },
+      "solid": true,
+      "walkable": false,
+      "is_bed": true,
+      "interact_verb": "Поспать",
+      "xp": 25
+    },
+    "shelter_canopy": {
+      "id": "shelter_canopy",
+      "name": "Навес",
+      "description": "Укрывает от дождя и холода. Восстанавливает комфорт рядом.",
+      "sprite": "res://assets/sprites/buildings/shelter_canopy.png",
+      "cost": { "wood": 8, "cloth": 5, "rope": 2 },
+      "solid": false,
+      "walkable": true,
+      "provides_shelter": true,
+      "xp": 28
+    },
+    "workbench": {
+      "id": "workbench",
+      "name": "Рабочий стол",
+      "description": "Открывает сложные рецепты крафта инструментов, снаряжения и аптечек.",
+      "sprite": "res://assets/sprites/buildings/workbench.png",
+      "cost": { "wood": 8, "scrap_metal": 4, "stone": 2 },
+      "solid": true,
+      "walkable": false,
+      "station_type": "workbench",
+      "interact_verb": "Мастерить",
+      "xp": 35
+    },
+    "rain_collector": {
+      "id": "rain_collector",
+      "name": "Сборщик воды",
+      "description": "Накапливает чистую дождевую воду (быстрее во время дождя).",
+      "sprite": "res://assets/sprites/buildings/rain_collector.png",
+      "cost": { "wood": 4, "plastic": 4, "cloth": 2 },
+      "solid": true,
+      "walkable": false,
+      "is_rain_collector": true,
+      "interact_verb": "Набрать воду",
+      "xp": 26
+    },
+    "garden_plot": {
+      "id": "garden_plot",
+      "name": "Огородная грядка",
+      "description": "Позволяет посадить семена и вырастить свежие овощи.",
+      "sprite": "res://assets/sprites/buildings/garden_plot.png",
+      "cost": { "wood": 4, "stone": 2 },
+      "solid": false,
+      "walkable": true,
+      "is_garden": true,
+      "interact_verb": "Посадить / Собрать",
+      "xp": 24
+    },
+    "lantern_post": {
+      "id": "lantern_post",
+      "name": "Фонарный столб",
+      "description": "Постоянно освещает двор убежища в тёмное время суток.",
+      "sprite": "res://assets/sprites/buildings/lantern_post.png",
+      "cost": { "wood": 3, "scrap_metal": 3, "plastic": 1 },
+      "solid": true,
+      "walkable": false,
+      "provides_light": true,
+      "light_radius": 2.8,
+      "interact_verb": "Переключить свет",
+      "xp": 22
+    },
+    "furnace": {
+      "id": "furnace",
+      "name": "Каменная печь",
+      "description": "Мощный источник тепла и света, работает как улучшенный костёр.",
+      "sprite": "res://assets/sprites/buildings/furnace.png",
+      "cost": { "stone": 12, "scrap_metal": 4 },
+      "solid": true,
+      "walkable": false,
+      "provides_light": true,
+      "light_radius": 2.6,
+      "station_type": "campfire",
+      "interact_verb": "Проверить печь",
+      "xp": 40
+    }
+  }
+}

@@ -1,0 +1,20 @@
+extends Node
+
+# Глобальная шина сигналов для слабой связанности систем Afterfall
+signal stats_changed(stats: Dictionary)
+signal inventory_changed()
+signal equipment_changed()
+signal skills_changed(skills: Dictionary)
+signal skill_leveled_up(skill_id: String, new_level: int)
+signal time_updated(day: int, hour: float, phase: String)
+signal weather_changed(weather: String)
+signal interactable_changed(target: Node, label_text: String)
+signal gather_progress(active: bool, progress: float, label_text: String)
+signal notification_requested(message: String, color: Color)
+signal build_mode_changed(active: bool, building_id: String)
+signal storage_opened(building_node: Node)
+signal poi_discovered(poi_name: String, xp_reward: int)
+signal player_died(reason: String)
+signal game_saved(manual: bool)
+signal settings_changed(settings: Dictionary)
+signal open_crafting_station(station_type: String)

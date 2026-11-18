@@ -1,0 +1,9 @@
+# Godot 4
+.godot/
+*.translation
+
+# Android build output
+build/
+*.apk
+*.aab
+*.idsig

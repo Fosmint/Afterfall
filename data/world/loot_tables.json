@@ -1,0 +1,302 @@
+{
+  "world_objects": {
+    "tree_pine": {
+      "name": "Сосна",
+      "type": "tree",
+      "sprite": "res://assets/sprites/objects/tree_pine.png",
+      "solid": true,
+      "interact_verb": "Рубить",
+      "preferred_tool": "axe",
+      "gather_time": 1.6,
+      "max_uses": 3,
+      "sound": "chop_wood",
+      "drops": [
+        { "item": "wood", "min": 2, "max": 4, "chance": 1.0 },
+        { "item": "seeds", "min": 1, "max": 1, "chance": 0.15 }
+      ]
+    },
+    "tree_dead": {
+      "name": "Сухое дерево",
+      "type": "tree",
+      "sprite": "res://assets/sprites/objects/tree_dead.png",
+      "solid": true,
+      "interact_verb": "Рубить",
+      "preferred_tool": "axe",
+      "gather_time": 1.2,
+      "max_uses": 2,
+      "sound": "chop_wood",
+      "drops": [
+        { "item": "wood", "min": 2, "max": 3, "chance": 1.0 }
+      ]
+    },
+    "fallen_log": {
+      "name": "Поваленное бревно",
+      "type": "tree",
+      "sprite": "res://assets/sprites/objects/fallen_log.png",
+      "solid": true,
+      "interact_verb": "Собрать дрова",
+      "preferred_tool": "axe",
+      "gather_time": 1.0,
+      "max_uses": 1,
+      "sound": "chop_wood",
+      "drops": [
+        { "item": "wood", "min": 2, "max": 4, "chance": 1.0 }
+      ]
+    },
+    "bush_berry": {
+      "name": "Ягодный куст",
+      "type": "plant",
+      "sprite": "res://assets/sprites/objects/bush_berry.png",
+      "solid": false,
+      "interact_verb": "Собрать ягоды",
+      "preferred_tool": "none",
+      "gather_time": 0.9,
+      "max_uses": 2,
+      "sound": "pickup",
+      "drops": [
+        { "item": "berries", "min": 2, "max": 4, "chance": 1.0 },
+        { "item": "seeds", "min": 1, "max": 2, "chance": 0.45 },
+        { "item": "wood", "min": 1, "max": 1, "chance": 0.4 }
+      ]
+    },
+    "bush_dry": {
+      "name": "Сухой куст",
+      "type": "plant",
+      "sprite": "res://assets/sprites/objects/bush_dry.png",
+      "solid": false,
+      "interact_verb": "Собрать хворост",
+      "preferred_tool": "none",
+      "gather_time": 0.8,
+      "max_uses": 1,
+      "sound": "pickup",
+      "drops": [
+        { "item": "wood", "min": 1, "max": 2, "chance": 1.0 },
+        { "item": "cloth", "min": 1, "max": 1, "chance": 0.25 }
+      ]
+    },
+    "rock_large": {
+      "name": "Валун",
+      "type": "rock",
+      "sprite": "res://assets/sprites/objects/rock_large.png",
+      "solid": true,
+      "interact_verb": "Добыть камень",
+      "preferred_tool": "pickaxe",
+      "gather_time": 1.8,
+      "max_uses": 3,
+      "sound": "mine_stone",
+      "drops": [
+        { "item": "stone", "min": 2, "max": 4, "chance": 1.0 },
+        { "item": "scrap_metal", "min": 1, "max": 1, "chance": 0.2 }
+      ]
+    },
+    "car_wreck_rust": {
+      "name": "Ржавый автомобиль",
+      "type": "vehicle",
+      "sprite": "res://assets/sprites/objects/car_wreck_rust.png",
+      "solid": true,
+      "interact_verb": "Разобрать авто",
+      "preferred_tool": "scavenge",
+      "gather_time": 2.0,
+      "max_uses": 2,
+      "sound": "scavenge_metal",
+      "drops": [
+        { "item": "scrap_metal", "min": 2, "max": 4, "chance": 1.0 },
+        { "item": "plastic", "min": 1, "max": 2, "chance": 0.65 },
+        { "item": "cloth", "min": 1, "max": 2, "chance": 0.5 },
+        { "item": "battery", "min": 1, "max": 1, "chance": 0.25 },
+        { "item": "fuel_can", "min": 1, "max": 1, "chance": 0.2 }
+      ]
+    },
+    "car_wreck_blue": {
+      "name": "Заброшенная машина",
+      "type": "vehicle",
+      "sprite": "res://assets/sprites/objects/car_wreck_blue.png",
+      "solid": true,
+      "interact_verb": "Обыскать авто",
+      "preferred_tool": "scavenge",
+      "gather_time": 1.9,
+      "max_uses": 2,
+      "sound": "scavenge_metal",
+      "drops": [
+        { "item": "scrap_metal", "min": 2, "max": 3, "chance": 1.0 },
+        { "item": "cloth", "min": 1, "max": 2, "chance": 0.6 },
+        { "item": "canned_food", "min": 1, "max": 1, "chance": 0.35 },
+        { "item": "electronics", "min": 1, "max": 1, "chance": 0.28 }
+      ]
+    },
+    "crate_wood": {
+      "name": "Деревянный ящик",
+      "type": "container",
+      "sprite": "res://assets/sprites/objects/crate_wood.png",
+      "solid": true,
+      "interact_verb": "Обыскать ящик",
+      "preferred_tool": "scavenge",
+      "gather_time": 1.2,
+      "max_uses": 1,
+      "sound": "chop_wood",
+      "drops": [
+        { "item": "wood", "min": 1, "max": 3, "chance": 0.85 },
+        { "item": "nails", "min": 1, "max": 3, "chance": 0.55 },
+        { "item": "canned_food", "min": 1, "max": 2, "chance": 0.45 },
+        { "item": "clean_water", "min": 1, "max": 1, "chance": 0.4 },
+        { "item": "cloth", "min": 1, "max": 2, "chance": 0.5 }
+      ]
+    },
+    "barrel_rust": {
+      "name": "Ржавая бочка",
+      "type": "container",
+      "sprite": "res://assets/sprites/objects/barrel_rust.png",
+      "solid": true,
+      "interact_verb": "Обыскать бочку",
+      "preferred_tool": "scavenge",
+      "gather_time": 1.2,
+      "max_uses": 1,
+      "sound": "scavenge_metal",
+      "drops": [
+        { "item": "scrap_metal", "min": 1, "max": 3, "chance": 0.9 },
+        { "item": "dirty_water", "min": 1, "max": 2, "chance": 0.55 },
+        { "item": "plastic", "min": 1, "max": 2, "chance": 0.5 },
+        { "item": "fuel_can", "min": 1, "max": 1, "chance": 0.2 }
+      ]
+    },
+    "container_metal": {
+      "name": "Грузовой контейнер",
+      "type": "container",
+      "sprite": "res://assets/sprites/objects/container_metal.png",
+      "solid": true,
+      "interact_verb": "Вскрыть контейнер",
+      "preferred_tool": "scavenge",
+      "gather_time": 2.2,
+      "max_uses": 2,
+      "sound": "scavenge_metal",
+      "drops": [
+        { "item": "scrap_metal", "min": 2, "max": 4, "chance": 0.9 },
+        { "item": "electronics", "min": 1, "max": 2, "chance": 0.5 },
+        { "item": "canned_food", "min": 1, "max": 2, "chance": 0.55 },
+        { "item": "medkit", "min": 1, "max": 1, "chance": 0.25 },
+        { "item": "battery", "min": 1, "max": 2, "chance": 0.4 }
+      ]
+    },
+    "trash_pile": {
+      "name": "Куча обломков",
+      "type": "scavenge",
+      "sprite": "res://assets/sprites/objects/trash_pile.png",
+      "solid": false,
+      "interact_verb": "Разобрать хлам",
+      "preferred_tool": "none",
+      "gather_time": 1.0,
+      "max_uses": 1,
+      "sound": "pickup",
+      "drops": [
+        { "item": "plastic", "min": 1, "max": 2, "chance": 0.75 },
+        { "item": "cloth", "min": 1, "max": 2, "chance": 0.65 },
+        { "item": "scrap_metal", "min": 1, "max": 2, "chance": 0.55 }
+      ]
+    },
+    "road_sign": {
+      "name": "Дорожный знак",
+      "type": "decor",
+      "sprite": "res://assets/sprites/objects/road_sign.png",
+      "solid": true,
+      "interact_verb": "Снять металл",
+      "preferred_tool": "scavenge",
+      "gather_time": 1.3,
+      "max_uses": 1,
+      "sound": "scavenge_metal",
+      "drops": [
+        { "item": "scrap_metal", "min": 2, "max": 3, "chance": 1.0 }
+      ]
+    },
+    "camp_tent": {
+      "name": "Заброшенная палатка",
+      "type": "container",
+      "sprite": "res://assets/sprites/objects/camp_tent.png",
+      "solid": true,
+      "interact_verb": "Обыскать палатку",
+      "preferred_tool": "none",
+      "gather_time": 1.4,
+      "max_uses": 1,
+      "sound": "pickup",
+      "drops": [
+        { "item": "cloth", "min": 2, "max": 4, "chance": 1.0 },
+        { "item": "rope", "min": 1, "max": 2, "chance": 0.7 },
+        { "item": "clean_water", "min": 1, "max": 2, "chance": 0.65 },
+        { "item": "bandage", "min": 1, "max": 2, "chance": 0.55 },
+        { "item": "canned_food", "min": 1, "max": 2, "chance": 0.6 }
+      ]
+    },
+    "house_ruin": {
+      "name": "Разрушенный дом",
+      "type": "building_poi",
+      "sprite": "res://assets/sprites/objects/house_ruin.png",
+      "solid": true,
+      "interact_verb": "Исследовать дом",
+      "preferred_tool": "scavenge",
+      "gather_time": 2.4,
+      "max_uses": 3,
+      "sound": "pickup",
+      "drops": [
+        { "item": "cloth", "min": 1, "max": 3, "chance": 0.85 },
+        { "item": "canned_food", "min": 1, "max": 2, "chance": 0.65 },
+        { "item": "clean_water", "min": 1, "max": 2, "chance": 0.55 },
+        { "item": "bandage", "min": 1, "max": 2, "chance": 0.45 },
+        { "item": "wood", "min": 2, "max": 3, "chance": 0.7 },
+        { "item": "seeds", "min": 1, "max": 2, "chance": 0.35 }
+      ]
+    },
+    "shop_ruin": {
+      "name": "Заброшенный магазин",
+      "type": "building_poi",
+      "sprite": "res://assets/sprites/objects/shop_ruin.png",
+      "solid": true,
+      "interact_verb": "Обыскать магазин",
+      "preferred_tool": "scavenge",
+      "gather_time": 2.4,
+      "max_uses": 3,
+      "sound": "pickup",
+      "drops": [
+        { "item": "canned_food", "min": 2, "max": 3, "chance": 0.9 },
+        { "item": "clean_water", "min": 1, "max": 3, "chance": 0.8 },
+        { "item": "plastic", "min": 2, "max": 3, "chance": 0.75 },
+        { "item": "battery", "min": 1, "max": 2, "chance": 0.45 },
+        { "item": "medkit", "min": 1, "max": 1, "chance": 0.3 }
+      ]
+    },
+    "warehouse_ruin": {
+      "name": "Старый склад",
+      "type": "building_poi",
+      "sprite": "res://assets/sprites/objects/warehouse_ruin.png",
+      "solid": true,
+      "interact_verb": "Обыскать склад",
+      "preferred_tool": "scavenge",
+      "gather_time": 2.5,
+      "max_uses": 3,
+      "sound": "scavenge_metal",
+      "drops": [
+        { "item": "scrap_metal", "min": 3, "max": 5, "chance": 0.95 },
+        { "item": "wood", "min": 2, "max": 4, "chance": 0.85 },
+        { "item": "nails", "min": 2, "max": 5, "chance": 0.75 },
+        { "item": "electronics", "min": 1, "max": 2, "chance": 0.6 },
+        { "item": "rope", "min": 1, "max": 2, "chance": 0.5 }
+      ]
+    },
+    "gas_station": {
+      "name": "Разрушенная АЗС",
+      "type": "building_poi",
+      "sprite": "res://assets/sprites/objects/gas_station.png",
+      "solid": true,
+      "interact_verb": "Обыскать АЗС",
+      "preferred_tool": "scavenge",
+      "gather_time": 2.4,
+      "max_uses": 3,
+      "sound": "scavenge_metal",
+      "drops": [
+        { "item": "fuel_can", "min": 1, "max": 2, "chance": 0.8 },
+        { "item": "plastic", "min": 2, "max": 3, "chance": 0.85 },
+        { "item": "scrap_metal", "min": 2, "max": 4, "chance": 0.8 },
+        { "item": "canned_food", "min": 1, "max": 2, "chance": 0.5 },
+        { "item": "battery", "min": 1, "max": 2, "chance": 0.5 }
+      ]
+    }
+  }
+}

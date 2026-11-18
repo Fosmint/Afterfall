@@ -1,0 +1,314 @@
+{
+  "items": {
+    "wood": {
+      "id": "wood",
+      "name": "Древесина",
+      "category": "resource",
+      "max_stack": 50,
+      "icon": "res://assets/sprites/items/wood.png",
+      "description": "Сухие ветки и брёвна. Основа для костра, инструментов и убежища."
+    },
+    "stone": {
+      "id": "stone",
+      "name": "Камень",
+      "category": "resource",
+      "max_stack": 50,
+      "icon": "res://assets/sprites/items/stone.png",
+      "description": "Прочный обломок камня для простых орудий и очага."
+    },
+    "scrap_metal": {
+      "id": "scrap_metal",
+      "name": "Металлолом",
+      "category": "resource",
+      "max_stack": 50,
+      "icon": "res://assets/sprites/items/scrap_metal.png",
+      "description": "Ржавые пластины и детали старых машин. Нужен для прочных инструментов."
+    },
+    "cloth": {
+      "id": "cloth",
+      "name": "Ткань",
+      "category": "resource",
+      "max_stack": 40,
+      "icon": "res://assets/sprites/items/cloth.png",
+      "description": "Лоскуты плотной ткани. Подходит для верёвок, повязок и навеса."
+    },
+    "plastic": {
+      "id": "plastic",
+      "name": "Пластик",
+      "category": "resource",
+      "max_stack": 40,
+      "icon": "res://assets/sprites/items/plastic.png",
+      "description": "Уцелевшие бутылки и корпуса. Полезен для сбора воды и электроники."
+    },
+    "rope": {
+      "id": "rope",
+      "name": "Верёвка",
+      "category": "resource",
+      "max_stack": 30,
+      "icon": "res://assets/sprites/items/rope.png",
+      "description": "Крепкая скрученная верёвка из ткани."
+    },
+    "nails": {
+      "id": "nails",
+      "name": "Гвозди",
+      "category": "resource",
+      "max_stack": 50,
+      "icon": "res://assets/sprites/items/nails.png",
+      "description": "Самодельные или найденные гвозди для укрепления построек."
+    },
+    "electronics": {
+      "id": "electronics",
+      "name": "Электроника",
+      "category": "resource",
+      "max_stack": 20,
+      "icon": "res://assets/sprites/items/electronics.png",
+      "description": "Редкие микросхемы и провода из заброшенных зданий."
+    },
+    "battery": {
+      "id": "battery",
+      "name": "Батарейка",
+      "category": "resource",
+      "max_stack": 20,
+      "icon": "res://assets/sprites/items/battery.png",
+      "description": "Заряженный элемент питания для фонарика и приборов."
+    },
+    "fuel_can": {
+      "id": "fuel_can",
+      "name": "Канистра топлива",
+      "category": "resource",
+      "max_stack": 10,
+      "icon": "res://assets/sprites/items/fuel_can.png",
+      "description": "Остатки бензина с АЗС. Долго поддерживает огонь в печи и фонарях."
+    },
+    "charcoal": {
+      "id": "charcoal",
+      "name": "Древесный уголь",
+      "category": "resource",
+      "max_stack": 40,
+      "icon": "res://assets/sprites/items/charcoal.png",
+      "description": "Используется для фильтрации грязной воды и розжига."
+    },
+    "seeds": {
+      "id": "seeds",
+      "name": "Семена",
+      "category": "misc",
+      "max_stack": 30,
+      "icon": "res://assets/sprites/items/seeds.png",
+      "description": "Семена выносливых овощей. Можно посадить на грядке."
+    },
+    "berries": {
+      "id": "berries",
+      "name": "Дикие ягоды",
+      "category": "food",
+      "max_stack": 20,
+      "usable": true,
+      "effects": { "hunger": 14, "thirst": 6, "health": 2 },
+      "icon": "res://assets/sprites/items/berries.png",
+      "description": "Слегка кисловатые, но съедобные лесные ягоды."
+    },
+    "canned_food": {
+      "id": "canned_food",
+      "name": "Консервы",
+      "category": "food",
+      "max_stack": 15,
+      "usable": true,
+      "effects": { "hunger": 38, "energy": 8 },
+      "icon": "res://assets/sprites/items/canned_food.png",
+      "description": "Довоенные жестяные консервы. Надёжный источник калорий."
+    },
+    "vegetables": {
+      "id": "vegetables",
+      "name": "Свежие овощи",
+      "category": "food",
+      "max_stack": 20,
+      "usable": true,
+      "effects": { "hunger": 24, "thirst": 10, "health": 5 },
+      "icon": "res://assets/sprites/items/vegetables.png",
+      "description": "Выращенные в убежище овощи. Вкусно и полезно."
+    },
+    "cooked_ration": {
+      "id": "cooked_ration",
+      "name": "Горячий паёк",
+      "category": "food",
+      "max_stack": 10,
+      "usable": true,
+      "effects": { "hunger": 58, "energy": 20, "warmth": 25, "health": 10 },
+      "icon": "res://assets/sprites/items/cooked_ration.png",
+      "description": "Сытное блюдо, приготовленное на костре. Отлично согревает."
+    },
+    "dirty_water": {
+      "id": "dirty_water",
+      "name": "Мутная вода",
+      "category": "food",
+      "max_stack": 10,
+      "usable": true,
+      "effects": { "thirst": 22, "health": -6 },
+      "icon": "res://assets/sprites/items/dirty_water.png",
+      "description": "Неочищенная вода. Лучше прокипятить или очистить углём."
+    },
+    "clean_water": {
+      "id": "clean_water",
+      "name": "Чистая вода",
+      "category": "food",
+      "max_stack": 15,
+      "usable": true,
+      "effects": { "thirst": 42, "energy": 6 },
+      "icon": "res://assets/sprites/items/clean_water.png",
+      "description": "Питьевая вода, безопасная для здоровья."
+    },
+    "herbal_tea": {
+      "id": "herbal_tea",
+      "name": "Травяной чай",
+      "category": "food",
+      "max_stack": 10,
+      "usable": true,
+      "effects": { "thirst": 35, "warmth": 35, "energy": 18, "health": 8 },
+      "icon": "res://assets/sprites/items/herbal_tea.png",
+      "description": "Тёплый отвар из ягод и трав. Восстанавливает бодрость и согревает."
+    },
+    "bandage": {
+      "id": "bandage",
+      "name": "Повязка",
+      "category": "medicine",
+      "max_stack": 15,
+      "usable": true,
+      "effects": { "health": 25 },
+      "icon": "res://assets/sprites/items/bandage.png",
+      "description": "Простая тканевая перевязка. Восстанавливает 25 здоровья."
+    },
+    "medkit": {
+      "id": "medkit",
+      "name": "Аптечка",
+      "category": "medicine",
+      "max_stack": 5,
+      "usable": true,
+      "effects": { "health": 70, "energy": 15 },
+      "icon": "res://assets/sprites/items/medkit.png",
+      "description": "Полноценный медицинский набор. Быстро лечит серьёзные травмы."
+    },
+    "simple_axe": {
+      "id": "simple_axe",
+      "name": "Простой топор",
+      "category": "tool",
+      "max_stack": 1,
+      "equippable": true,
+      "tool_type": "axe",
+      "power": 1.6,
+      "durability": 60,
+      "icon": "res://assets/sprites/items/simple_axe.png",
+      "description": "Каменный топор. Ускоряет рубку деревьев и даёт больше древесины."
+    },
+    "iron_axe": {
+      "id": "iron_axe",
+      "name": "Железный топор",
+      "category": "tool",
+      "max_stack": 1,
+      "equippable": true,
+      "tool_type": "axe",
+      "power": 2.4,
+      "durability": 140,
+      "icon": "res://assets/sprites/items/iron_axe.png",
+      "description": "Прочный металлический топор. Рубит деревья почти вдвое быстрее."
+    },
+    "pickaxe": {
+      "id": "pickaxe",
+      "name": "Кирка",
+      "category": "tool",
+      "max_stack": 1,
+      "equippable": true,
+      "tool_type": "pickaxe",
+      "power": 2.2,
+      "durability": 120,
+      "icon": "res://assets/sprites/items/pickaxe.png",
+      "description": "Незаменима для добычи камня и разборки завалов."
+    },
+    "simple_tool": {
+      "id": "simple_tool",
+      "name": "Простой инструмент",
+      "category": "tool",
+      "max_stack": 1,
+      "equippable": true,
+      "tool_type": "universal",
+      "power": 1.5,
+      "durability": 80,
+      "icon": "res://assets/sprites/items/simple_tool.png",
+      "description": "Универсальный набор для разборки машин, ящиков и ремонта."
+    },
+    "crowbar": {
+      "id": "crowbar",
+      "name": "Монтировка",
+      "category": "tool",
+      "max_stack": 1,
+      "equippable": true,
+      "tool_type": "scavenge",
+      "power": 2.3,
+      "durability": 150,
+      "icon": "res://assets/sprites/items/crowbar.png",
+      "description": "Позволяет быстро вскрывать контейнеры, авто и двери заброшенных зданий."
+    },
+    "torch": {
+      "id": "torch",
+      "name": "Факел",
+      "category": "tool",
+      "max_stack": 3,
+      "equippable": true,
+      "tool_type": "light",
+      "light_radius": 1.6,
+      "durability": 90,
+      "icon": "res://assets/sprites/items/torch.png",
+      "description": "Освещает путь ночью и слегка согревает."
+    },
+    "flashlight": {
+      "id": "flashlight",
+      "name": "Фонарик",
+      "category": "tool",
+      "max_stack": 1,
+      "equippable": true,
+      "tool_type": "light",
+      "light_radius": 2.5,
+      "durability": 240,
+      "icon": "res://assets/sprites/items/flashlight.png",
+      "description": "Яркий светодиодный фонарик для ночных вылазок."
+    },
+    "backpack_upgrade": {
+      "id": "backpack_upgrade",
+      "name": "Усиленный рюкзак",
+      "category": "misc",
+      "max_stack": 1,
+      "usable": true,
+      "upgrade_type": "backpack",
+      "icon": "res://assets/sprites/items/backpack_upgrade.png",
+      "description": "Навсегда увеличивает вместимость инвентаря с 24 до 32 слотов."
+    },
+    "warm_coat": {
+      "id": "warm_coat",
+      "name": "Тёплая куртка",
+      "category": "misc",
+      "max_stack": 1,
+      "usable": true,
+      "upgrade_type": "coat",
+      "icon": "res://assets/sprites/items/warm_coat.png",
+      "description": "Снижает потерю тепла ночью и под дождём на 50%."
+    },
+    "campfire_kit": {
+      "id": "campfire_kit",
+      "name": "Набор для костра",
+      "category": "misc",
+      "max_stack": 5,
+      "usable": true,
+      "place_building": "campfire",
+      "icon": "res://assets/sprites/items/campfire_kit.png",
+      "description": "Готовый комплект для быстрой установки костра в режиме строительства."
+    },
+    "wooden_crate": {
+      "id": "wooden_crate",
+      "name": "Ящик",
+      "category": "misc",
+      "max_stack": 5,
+      "usable": true,
+      "place_building": "storage_chest",
+      "icon": "res://assets/sprites/items/wooden_crate.png",
+      "description": "Деревянный ящик для хранения припасов в убежище."
+    }
+  }
+}
